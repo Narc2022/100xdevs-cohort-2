@@ -1,25 +1,71 @@
-DIFFERENCE BETWEEN ECMAScript,JavaScript,Node.js & Bun?
+/*DIFFERENCE BETWEEN ECMAScript,JavaScript,Node.js & Bun?
 -ECMAScript is scripting language specification do which Js is based.
 -Javascript is scripting language that conforms to the ECMAScript specification.
 Beyond ECMAScript Js includes additional features that are not part of ECMAScript specification
 Example Document Object Model DOM Manupulation which is crucial part of web development.
-----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 *what is Node js?
 -Node Js is runtime in backend today.
 -Some smart people said they wanted to re-write the js runtime for the backend introduced Bun
-----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 *what is Bun?
 -It is significantly faster runtime.It is writtern in zig
-----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 *what can we do with node js?
 -create clis,video player,game,HTTP servers
-----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 Most of the time we use Node js for HTTP Servers. Our end goal is also same.
 What is an HTTP server?
 Hyper Text Transnfer Protocol
 -A protocol that defined for machine to communicate
 Specifically for websites, it is most important to communicate frontend with backend.
-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 what is RPC?
 -Remote Procedure Call (RPC) is a powerful technique for constructing distributed, client-server based applications.
-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+what are the common methods you can send to your BE server?
+-GET,POST,PUT,DELETE
+---------------------------------------------------------------------------------------------------------------
+what are the common status codes the backend responds with?
+-200 - Everything is ok
+-404 - Page/Route Not found
+-403 - Authentication Issues
+-500 - Internal server error
+---------------------------------------------------------------------------------------------------------------
+create basic server returns Hello World?
+const express = require('express');
+const port = 3000;
+const app = express();
+
+app.get('/',function (req,res) {
+    res.send('Hello World!!');
+})
+
+app.listen(port)
+----------------------------------------------------------------------------------------------------------------
+Example of app listening on port?
+create basic server returns Hello World?
+const express = require('express');
+const port = 3000;
+const app = express();
+
+app.get('/',function (req,res) {
+    res.send('Hello World!!');
+})
+
+app.listen(port,()=>{
+    console.log(`Example of app listening on port${port}`)
+})
+----------------------------------------------------------------------------------------------------------------
+create server with route /route-handler?
+
+const express = require('express');
+const port = 3000;
+const app = express();
+
+app.get('/route-handler',funnction(req,res){
+    res.json({name:'sachin',age:27})
+})
+----------------------------------------------------------------------------------------------------------------
+
+*/
