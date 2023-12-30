@@ -21,4 +21,12 @@ app.use(function (err, req, res, next) {
 
 ----------------------------------------------------------------------------------------------------------------
 How can you do better input validation?
--with zod
+- with zod
+----------------------------------------------------------------------------------------------------------------
+what is zod?
+- zod is the library use for validation in backend.
+- Zod is designed to be as developer-friendly as possible. 
+  The goal is to eliminate duplicative type declarations.
+  With Zod, you declare a validator once and Zod will automatically infer the static TypeScript type.
+  It's easy to compose simpler types into complex data structures.
+----------------------------------------------------------------------------------------------------------------
