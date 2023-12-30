@@ -1,15 +1,19 @@
 const express = require("express");
+const zod = require("zod");
 const app = express();
+
+//syntax of schema for validation
+const schema = zod.array(zod.number());
 
 app.use(express.json());
 
-
 app.post("/health-checkup", function (req, res) {
-  console.log("req.body.kidneys", req.body.kidneys);
-  const kidney = req.body.kidneys;
-  const kidneyLength = kidney.length;
+  const kidneys = req.body.kidneys;
 
-  res.send("you have " + kidneyLength + " kidneys");
+  const response = schema.safeParse(kidneys);
+  res.send({
+    response,
+  });
 });
 
 app.listen(3000);
