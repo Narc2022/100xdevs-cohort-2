@@ -1,0 +1,17 @@
+Q.1 For SQL database?
+schema means what is structure on my data I want to store data
+--------------------------------------------------------------------------------------------------------------------------------------
+Q.2 What is MongoDb?
+MongoDb is schema less database.
+It is also known as no sql db.
+MongoDb tell sent me whatever data you want in json form.
+and next send me user name and password to store or access anytype of data
+--------------------------------------------------------------------------------------------------------------------------------------
+Q.3 what is moongose?
+moongose is library we import in express server?
+--------------------------------------------------------------------------------------------------------------------------------------
+Q.4 If MongoDb is schema less db the why we need to create schema in backend to store data?
+for connecting mongodb with express and node js we use one library moongose which provides the security feature so that we can not
+data without providing schema to it.
+--------------------------------------------------------------------------------------------------------------------------------------
+Q.5
