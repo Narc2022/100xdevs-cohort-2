@@ -1,0 +1,12 @@
+Authentication types
+- Hashing, Encryption, Json Web Tokens & local storage.
+What is Hashing?
+- we hash password before we store in database. Hashing is one way process we can't convert it back to orignal.
+what is Encryption?
+- It is two way given the give the value convert to encrypted value & encrypted value convert to previous value. as long as we have password.
+what is Json Web Tokens?
+- It is neither of encryption or hashing (its technically a digital signature)
+- Anyone can see the orignal output given the signature.
+- Signature can be verified only using the password.
+what is local storage?
+- 
