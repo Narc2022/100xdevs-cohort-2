@@ -16,20 +16,20 @@ const User = mongoose.model("User", {
 });
 
 app.post("/signup", async function (req, res) {
-  const username = req.body.username;
+  const email = req.body.email;
   const password = req.body.password;
   const name = req.body.name;
 
-  const existingUser = User.findOne({ email: username });
+  const existingUser = await User.findOne({ email: email });
   console.log('existingUser', existingUser)
   //CRUD create,update,delete, read
   if (existingUser) {
     return res.status(400).send("Username already exists");
   }
-  const user = new User({ name: name, email: "username", password: password });
+  const user = new User({ name: name, email: email, password: password });
   user.save();
   res.json({
-    msg: "Use created successfully",
+    msg: "User created successfully",
   });
 });
 app.listen(3000)
