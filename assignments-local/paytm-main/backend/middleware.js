@@ -3,21 +3,21 @@ const jwt = require("jsonwebtoken");
 
 const authMiddleware = (req, res, next) => {
   const authHeader = req.headers.authorization;
+  console.log("au", authHeader);
 
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    console.log("Inside");
     return res.status(403).json({});
   }
 
   const token = authHeader.split(" ")[1];
 
   try {
+    console.log("token", token);
     const decoded = jwt.verify(token, JWT_SECRET);
-    if (decoded.userId) {
-      req.userId = decoded.userId;
-      next();
-    } else {
-      return res.status(403).json({});
-    }
+    console.log("decoded", decoded);
+    req.userId = decoded.userId;
+    next();
   } catch (err) {
     return res.status(403).json({});
   }
