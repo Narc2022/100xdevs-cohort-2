@@ -15,11 +15,10 @@ router.post("/signup", async (req, res) => {
   const body = req.body;
   const { success } = signupSchema.safeParse(req.body);
   if (!success) {
-    return res.json({
-      message: "Email already taken / Incorrect inputs",
+    return res.status(403).json({
+      message: "Incorrect inputs",
     });
   }
-
   const existingUser = await User.findOne({
     username: body.username,
   });
