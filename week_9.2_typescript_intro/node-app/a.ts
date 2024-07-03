@@ -1,2 +1,2 @@
 const x: number = 1;
-console.log("x", x);
+console.log(x);
