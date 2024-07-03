@@ -5,6 +5,8 @@ const user = {
   age: 21,
 };
 
+// An interface in TypeScript defines the structure or skeleton of an object
+
 interface User {
   firstName: string;
   lastName: string;
