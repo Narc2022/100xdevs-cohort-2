@@ -25,7 +25,7 @@ interface Users {
 }
 
 const ageArray: Users[] = [
-  { firstName: "sachin", lastName: "singh", age: 28 },
+  { firstName: "sachin", lastName: "singh", age: 16 },
   { firstName: "vibha", lastName: "singh", age: 28 },
 ];
 
